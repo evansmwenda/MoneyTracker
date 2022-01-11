@@ -1,4 +1,16 @@
+import 'package:money_tracker/app/app.locator.dart';
+import 'package:money_tracker/app/app.router.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 class HomeViewModel extends BaseViewModel {
-    void initialise(){} 
+    final _navigationService = locator<NavigationService>();
+    void initialise(){}
+
+    void gotoAddTransaction() {
+        _navigationService.navigateTo(Routes.addTransactionView);
+    }
+
+    void gotoAllTransactions() {
+        _navigationService.navigateTo(Routes.transactionsView);
+    }
 }

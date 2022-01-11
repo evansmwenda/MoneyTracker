@@ -13,7 +13,22 @@ class TransactionsView extends StatelessWidget {
      viewModelBuilder: () => TransactionsViewModel(),
      builder: (context, model, child) => Scaffold(
        appBar: AppBar(title: Text("Transactions"),),
-       body: Center(child: Text("This is my money tracker app"),),
+       body: Container(
+         margin: EdgeInsets.symmetric(horizontal: 10,vertical:5,),
+         child: ListView.builder(
+             itemCount: 7,
+             itemBuilder: (context, index) {
+               return Column(
+                 children: [
+                   ListTile(
+                     title: Text("List tile $index",),
+                     subtitle: Text("subtitle here",),
+                   ),
+                   Divider(thickness: 1,),
+                 ],
+               );
+             }),
+       ),
      ),
    );
 }
