@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:money_tracker/ui/home/home_viewmodel.dart';
+import 'package:money_tracker/ui/views/home/home_viewmodel.dart';
 
 
 class HomeView extends StatelessWidget {
