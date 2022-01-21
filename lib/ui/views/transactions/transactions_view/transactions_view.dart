@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:money_tracker/ui/views/transactions/transactions_view/transactions_viewmodel.dart';
+import 'package:money_tracker/ui/widgets/transaction_tile.dart';
 import 'package:stacked/stacked.dart';
 
 
@@ -18,18 +19,12 @@ class TransactionsView extends StatelessWidget {
          child: ListView.builder(
              itemCount: 7,
              itemBuilder: (context, index) {
-               return Column(
-                 children: [
-                   ListTile(
-                     title: Text("List tile $index",),
-                     subtitle: Text("subtitle here",),
-                   ),
-                   Divider(thickness: 1,),
-                 ],
-               );
+               return TransactionTile(index: index);
              }),
        ),
      ),
    );
 }
 }
+
+
